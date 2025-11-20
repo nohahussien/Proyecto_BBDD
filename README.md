@@ -41,7 +41,7 @@ Tabla de los docentes del bootcamp.
 Tipos de modalidad de los cursos.
 
 - `idmodalidad` (PK, serial)  
-- `nombremodalidad` (Presencial, Online)
+- `nombremodalidad` (Presencial, Online, etc.)
 
 ### 6. `promocion`
 Tabla de promociones (ediciones de cada curso).
@@ -76,10 +76,10 @@ Tabla que almacena la calificación de cada alumno en cada proyecto.
 ### 10. `docentepromocion`
 Relaciona docentes con las promociones que imparten, incluyendo modalidad.
 
-- `iddocente` (FK → `docente`)  
+- `docente_id` (FK → `docente`)  
 - `idpromocion` (FK → `promocion`)  
 - `idmodalidad` (FK → `modalidad`)  
-- PK compuesta: `(iddocente, idpromocion, idmodalidad)`
+- PK compuesta: `(docente_id, idpromocion, idmodalidad)`
 
 ### 11. `proyectospromocion`
 Relaciona los proyectos que se trabajan en cada promoción.
@@ -104,7 +104,7 @@ Relaciona los proyectos que se trabajan en cada promoción.
 
 - Cada alumno pertenece a una única promoción (`estudiantepromocion`).  
 - Cada promoción tiene varios proyectos (`proyectospromocion`).  
-- Cada alumno tiene calificaciones por proyecto (`calificacionproyectoalumno`).  
+- Cada alumno tiene calificacion por proyecto (`calificacionproyectoalumno`).  
 - Cada docente puede impartir varias promociones con modalidad específica (`docentepromocion`).  
 
 ---
