@@ -21,14 +21,6 @@ INNER JOIN promocion ON docentepromocion.idpromocion = promocion.idpromocion
 INNER JOIN campus ON promocion.idcampus = campus.idcampus
 WHERE campus.ciudad = 'Madrid'
 
--- Ver cuantas personas han estudiado Online y cuantas has estudiado Presencial
-SELECT modalidad.nombremodalidad, count(estudiantepromocion.idestudiante)
-from modalidad
-INNER JOIN promocion ON promocion.idmodalidad = modalidad.idmodalidad
-INNER JOIN estudiantepromocion ON estudiantepromocion.idpromocion = promocion.idpromocion
-GROUP BY modalidad.nombremodalidad
-
-
 -- Cuantas personas tienen algun suspenso en cada vertical
 select vertical.nombre, count(calificacionproyectoalumno.idestudiante)
 from vertical
