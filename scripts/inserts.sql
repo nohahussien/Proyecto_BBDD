@@ -86,7 +86,7 @@ INSERT INTO public.docente (nombre, rol) VALUES
 ('Ariel Lledó', 'TA'),
 ('Mario Prats', 'LI'),
 ('Luis Ángel Suárez', 'LI'),
-('María Dolores Diaz', 'LI');
+('María Dolores Diaz', 'LI')
 
 /**********************************************
                  TABLA MODALIDAD
